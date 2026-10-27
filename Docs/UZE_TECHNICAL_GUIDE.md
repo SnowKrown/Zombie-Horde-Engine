@@ -365,7 +365,8 @@ namespace UZE.Core
         Wandering = 1,
         Investigating = 2,
         AggroHorde = 3,
-        LungeAttack = 4
+        LungeWindup = 4,
+        LungeAttack = 5
     }
 }
 ```
@@ -381,9 +382,9 @@ namespace UZE.Core
 * **Paso 2 (`RaycastCommand.ScheduleBatch`):** Despacho asincrono de rayos fisicos en hilos de trabajo contra `obstacleLayerMask`.
 * **Paso 3 (`ProcessVisionHitsJob`):** Si `hit.colliderInstanceID == 0`, la linea visual esta libre de obstaculos y el agente transiciona a `AggroHorde`.
 
-### 5.4 Ataques Especiales con Root Motion Horneado
-* Al hornear animaciones de embestida o salto, se extraen estructuras `RootMotionData` (`float3 translationDelta`, `float rotationDeltaY`) por cuadro.
-* Durante `ZombieState.LungeAttack`, el Job de integracion cinematica aplica estos desplazamientos directamente sobre la posicion y orientacion del agente sin sobrecarga de fisicas.
+### 5.4 Ataques Especiales con Orientacion Previa y Root Motion Horneado
+* **Orientacion de Ataque (`OrientLungeWindupJob`):** Al activarse el ataque, el agente entra en `ZombieState.LungeWindup`, rotando horizontalmente en el plano XZ hacia el objetivo con una velocidad angular configurada (`turnSpeedRadiansPerSec`). Solo cuando el vector `forward` y la direccion al objetivo quedan alineados dentro del umbral (`cosAlignThreshold`), transiciona a `ZombieState.LungeAttack` e inicia el temporizador en 0.
+* **Lanzamiento e Impulso (`ApplyRootMotionJob`):** Al hornear animaciones de embestida o salto, se extraen estructuras `RootMotionData` (`float3 translationDelta`, `float rotationDeltaY`) por cuadro. Durante `ZombieState.LungeAttack`, el Job de integracion cinematica aplica estos desplazamientos directamente sobre la posicion y orientacion del agente ya alineado sin sobrecarga de fisicas.
 
 ---
 

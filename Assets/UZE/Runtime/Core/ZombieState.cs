@@ -6,6 +6,7 @@ namespace UZE.Core
         Wandering = 1,
         Investigating = 2,
         AggroHorde = 3,
-        LungeAttack = 4
+        LungeWindup = 4,
+        LungeAttack = 5
     }
 }
