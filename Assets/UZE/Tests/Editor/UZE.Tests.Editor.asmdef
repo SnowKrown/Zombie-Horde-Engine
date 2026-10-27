@@ -1,0 +1,27 @@
+{
+    "name": "UZE.Tests.Editor",
+    "rootNamespace": "UZE.Tests.Editor",
+    "references": [
+        "UZE.Runtime",
+        "UZE.Editor",
+        "Unity.Mathematics",
+        "Unity.Collections",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

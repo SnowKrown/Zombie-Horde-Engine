@@ -1,0 +1,23 @@
+{
+    "name": "UZE.Tests.Runtime",
+    "rootNamespace": "UZE.Tests.Runtime",
+    "references": [
+        "UZE.Runtime",
+        "Unity.Mathematics",
+        "Unity.Collections",
+        "UnityEngine.TestRunner"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

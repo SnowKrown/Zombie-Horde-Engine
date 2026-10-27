@@ -1,0 +1,28 @@
+{
+    "name": "UZE.Editor",
+    "rootNamespace": "UZE.Editor",
+    "references": [
+        "UZE.Runtime",
+        "Unity.Burst",
+        "Unity.Burst.Editor",
+        "Unity.Mathematics",
+        "Unity.Collections",
+        "Unity.AI.Navigation",
+        "Unity.AI.Navigation.Editor",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Core.Editor",
+        "Unity.RenderPipelines.Universal.Runtime",
+        "Unity.RenderPipelines.Universal.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
