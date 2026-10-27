@@ -3,6 +3,7 @@
     "rootNamespace": "UZE.Samples",
     "references": [
         "UZE.Runtime",
+        "Unity.Collections",
         "Unity.InputSystem",
         "Unity.Mathematics"
     ],
